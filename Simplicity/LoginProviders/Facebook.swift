@@ -54,7 +54,7 @@ public class Facebook: OAuth2 {
                 preconditionFailure("You must configure your Facebook URL Scheme to use Facebook login.")
         }
         let clientId = urlScheme.substring(with: range)
-        let authorizationEndpoint = URL(string: "https://www.facebook.com/dialog/oauth")!
+        let authorizationEndpoint = URL(string: "https://www.facebook.com/v5.0/dialog/oauth")!
         let redirectEndpoint = URL(string: urlScheme + "://authorize")!
         
         super.init(clientId: clientId, authorizationEndpoint: authorizationEndpoint, redirectEndpoint: redirectEndpoint, grantType: .Implicit)
